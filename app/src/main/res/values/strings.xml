@@ -1,0 +1,232 @@
+<resources>
+    <string name="app_name">My Class App</string>
+    <string name="LOGIN">Login</string>
+    <string name="GetOtp">get otp</string>
+    <string name="enter_phone">Enter Phone Number</string>
+    <string name="guard_name">Guard Name</string>
+    <string name="id_card_image">ID_Card_image</string>
+    <string name="guard_Shift">Shift Time</string>
+    <string name="guard_address">Select Society</string>
+    <string name="guard_password">Password</string>
+    <string name="click_image">Click Image</string>
+    <string name="start_shift">Start Shift</string>
+    <string name="ID_image">Image for Id</string>
+    <string name="Gate_No">Gate Number</string>
+    <string name="shift_time">Shift Time</string>
+    <string name="shift_Date">Shift Date</string>
+    <string name="button_icon">button_icon</string>
+    <string name="logout_icon">logout_icon</string>
+    <string name="logout_text">LOGOUT</string>
+    <string name="settings_text">Settings</string>
+    <string name="settings_icon">settings_icon</string>
+    <string name="WIDGETS">WIDGETS</string>
+    <string name="call_us_des">call_us_des</string>
+    <string name="Contact">Contact Us</string>
+    <string name="setting_menu">Setting Menu</string>
+    <string name="notification">Notification</string>
+    <string name="user_setting">User Setting</string>
+    <string name="backArrowImage">backArrowImage</string>
+    <string name="backarrowimage">BackArrowImage</string>
+    <string name="backbtn">backBtn</string>
+    <string name="settingBtn">settingBtn</string>
+    <string name="splash_screen_image_logo">splash_screen_image_logo</string>
+    <string name="abidah_software_solutions_opc_private_limited">Abidah Software Solutions OPC Private Limited</string>
+    <string name="upload_image">Upload Image</string>
+    <string name="otp">OTP</string>
+    <string name="otp_sent">OTP Sent</string>
+    <string name="resend_otp">Resend otp</string>
+    <string name="_00_60">00:60</string>
+    <string name="please_wait">Please Wait…</string>
+    <string name="please_enter_phone_number_to_proceed_further">Please Enter Phone Number to Proceed Further</string>
+    <string name="welcome_text">Your Security Shift will Start after Login</string>
+    <string name="openDrawer">Open Navigation Drawer</string>
+    <string name="closeDrawer">Close Navigation Drawer</string>
+
+
+    <string-array name="Society_chooser">
+        <item>Adarsha Gharkul Society, Saidapur</item>
+        <item>Adarsha Krutika Society, Saidapur</item>
+        <item>Adarsha Uttara Society, Saidapur</item>
+        <item>One Earth Society, Saidapur</item>
+        <item>Madhukosh Society, Saidapur</item>
+    </string-array>
+
+    <!--    string for gate select id-->
+    <string-array name="GateSelector">
+        <item>Gate Number 1</item>
+        <item>Gate Number 2</item>
+        <item>Gate Number 3</item>
+        <item>Gate Number 4</item>
+        <item>Gate Number 5</item>
+        <item>Main Gate</item>
+    </string-array>
+
+    <!--  string array list for indian states  -->
+    <string-array name="array_indian_states">
+        <item>Andaman and Nicobar Islands</item>
+        <item>Andhra Pradesh</item>
+        <item>Arunachal Pradesh</item>
+        <item>Assam</item>
+        <item>Bihar</item>
+        <item>Chandigarh</item>
+        <item>Chhattisgarh</item>
+        <item>Dadra and Nagar Haveli</item>
+        <item>Daman and Diu</item>
+        <item>Delhi</item>
+        <item>Goa</item>
+        <item>Gujarat</item>
+        <item>Haryana</item>
+        <item>Himachal Pradesh</item>
+        <item>Jammu and Kashmir</item>
+        <item>Jharkhand</item>
+        <item>Karnataka</item>
+        <item>Kerala</item>
+        <item>Ladakh</item>
+        <item>Lakshadweep</item>
+        <item>Madhya Pradesh</item>
+        <item>Maharashtra</item>
+        <item>Manipur</item>
+        <item>Meghalaya</item>
+        <item>Mizoram</item>
+        <item>Nagaland</item>
+        <item>Orissa</item>
+        <item>Puducherry</item>
+        <item>Punjab</item>
+        <item>Rajasthan</item>
+        <item>Sikkim</item>
+        <item>Tamil Nadu</item>
+        <item>Telangana</item>
+        <item>Tripura</item>
+        <item>Uttarakhand</item>
+        <item>Uttar Pradesh</item>
+        <item>West Bengal</item>
+    </string-array>
+
+    <!-- String for Indian City List-->
+    <string-array name="array_maharashtra_districts">
+        <item>Ahmednagar</item>
+        <item>Akola</item>
+        <item>Amravati</item>
+        <item>Aurangabad</item>
+        <item>Beed</item>
+        <item>Bhandara</item>
+        <item>Buldhana</item>
+        <item>Chandrapur</item>
+        <item>Dhule</item>
+        <item>Gadchiroli</item>
+        <item>Gondia</item>
+        <item>Hingoli</item>
+        <item>Jalgaon</item>
+        <item>Jalna</item>
+        <item>Kolhapur</item>
+        <item>Latur</item>
+        <item>Mumbai City</item>
+        <item>Mumbai Suburban</item>
+        <item>Nagpur</item>
+        <item>Nanded</item>
+        <item>Nandurbar</item>
+        <item>Nashik</item>
+        <item>Osmanabad</item>
+        <item>Palghar</item>
+        <item>Parbhani</item>
+        <item>Pune</item>
+        <item>Raigad</item>
+        <item>Ratnagiri</item>
+        <item>Sangli</item>
+        <item>Satara</item>
+        <item>Sindhudurg</item>
+        <item>Solapur</item>
+        <item>Thane</item>
+        <item>Wardha</item>
+        <item>Washim</item>
+        <item>Yavatmal</item>
+    </string-array>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Fragmnet of gate activity</string>
+    <string name="select_society">Select Society</string>
+    <string name="please_use_your_password_to_start_shift">Please Use your Password to Start Shift</string>
+    <string name="start_shift_F">Start Shift</string>
+    <string name="logo_image">logo_image</string>
+    <string name="enter_passcode">Enter Passcode</string>
+    <string name="enter_name">Enter Full Name</string>
+    <string name="enter_society_name">Enter Society Name</string>
+    <string name="enter_password">Enter Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="get_start">Get Start</string>
+    <string name="select_society_name">Select Society Name</string>
+    <string name="create_password">Create Password</string>
+    <string name="register_text">Please Register with Email and Password Option</string>
+    <string name="security_service">Enter Security Service Name</string>
+    <string name="info_text">dose not Share/Trade Your Information</string>
+    <string name="data_text">secured with encrypts data</string>
+    <string name="select_gate">Select Gate</string>
+    <string name="image_click">Click Image</string>
+    <string name="warn_text">Please Click valid Image or your id will be Blocked!</string>
+    <string name="header_image">Header_Image</string>
+    <string name="settings">settings</string>
+    <string name="text_Otp_number">Verify OTP</string>
+    <string name="text_Otp_number_2">Please Enter Received OTP for Given mobile Number</string>
+    <string name="not_receive_text">Didn\'t Receive Otp Click</string>
+    <string name="resend_otp_text">Resend OTP</string>
+    <string name="_1">1</string>
+    <string name="_2">2</string>
+    <string name="_3">3</string>
+    <string name="_4">4</string>
+    <string name="_5">5</string>
+    <string name="_6">6</string>
+    <string name="guard_name_data">Guard Name :</string>
+    <string name="security_data_name">security service :</string>
+    <string name="society_name_data">society name :</string>
+    <string name="date_data">Date :</string>
+    <string name="time_data">Time :</string>
+    <string name="gate_id_data">Gate :</string>
+    <string name="data_name"> Name</string>
+    <string name="security_name_data"> Security Name</string>
+    <string name="data_date"> Date</string>
+    <string name="data_time"> Time</string>
+    <string name="data_gate_id"> Gate ID</string>
+    <string name="click">Click</string>
+    <string name="enter_wing">Enter Wing</string>
+    <string name="enter_block">Enter block</string>
+    <string name="enter_flat">Enter Flat Number</string>
+    <string name="document">Document ID</string>
+    <string name="doc_type">Document Type</string>
+    <string name="visiting_purpose">Visiting Purpose</string>
+    <string name="select_state">Select State</string>
+    <string name="select_city">Select City</string>
+    <string name="title_activity_gate_drawer">gateActivityDrawer</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="action_logout">Logout</string>
+    <string name="startShift">start shift</string>
+    <string name="share_icon">Share</string>
+    <string name="send_icon">Send</string>
+    <string name="submit_btn">Submit</string>
+    <string name="add_guard_detail">Register</string>
+    <string name="enter_guard_name">Enter Guard Name</string>
+    <string name="email_text">OR use email for login</string>
+    <string name="please_select_email_or_continue_with_mobuile">Please select Email or continue with mobile</string>
+    <string name="click_here">Click here</string>
+    <string name="enter_email">Enter Email</string>
+    <string name="wait_dailog">Please Wait...</string>
+    <string name="register_text_login">Register Already continue for Login</string>
+    <string name="login">LOGIN</string>
+    <string name="register_text_2">Please Login with Email and Password</string>
+    <string name="signup">SignUp</string>
+    <string name="class_name">Enter Class/Academy/Institute Name</string>
+    <string name="enter_address">Enter Address with Pincode</string>
+    <string name="staff_count">Enter Staff Count</string>
+    <string name="enter_subject_name">Enter Subject name</string>
+    <string name="submit">SUBMIT</string>
+    <string name="uploadText">Upload Image</string>
+</resources>

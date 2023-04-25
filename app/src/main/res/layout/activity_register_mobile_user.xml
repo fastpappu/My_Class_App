@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".LoginMobileActivity">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:orientation="vertical"
+        android:gravity="center"
+        android:id="@+id/image_logo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#fff"
+        android:padding="20dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/logo_image"
+            android:layout_centerHorizontal="true"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:elevation="@dimen/cardview_compat_inset_shadow"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="50dp"
+            android:src="@drawable/logo"
+            tools:ignore="ImageContrastCheck" />
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/text_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/logo_image"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="sans-serif"
+            android:text="@string/please_enter_phone_number_to_proceed_further"
+            android:textAlignment="center"
+            android:textColor="#5E35B1"
+            android:textSize="18sp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayoutPhone"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_phone"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="30dp"
+            android:hint="@string/enter_phone"
+            app:boxBackgroundColor="@color/white"
+            app:prefixText="+91"
+            app:prefixTextColor="#1E34BC"
+            app:startIconTint="@color/purple_500"
+            app:startIconDrawable="@drawable/baseline_phone_android_24">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionDone"
+                android:importantForAutofill="yes"
+                android:inputType="phone|number"
+                android:maxLength="10"
+                android:maxLines="1"
+                android:textStyle="bold"
+                tools:ignore="TextContrastCheck" />
+            <TextView
+                android:id="@+id/start_email_activity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:linksClickable="true"
+                android:textColorLink="@color/blue"
+                android:text="@string/email_text"
+                android:textAlignment="center"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <FrameLayout
+            android:id="@+id/progress_Bar_lay_verify"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textInputLayoutPhone"
+            android:layout_centerInParent="true">
+
+            <com.jpardogo.android.googleprogressbar.library.GoogleProgressBar
+                android:id="@+id/bar"
+                android:layout_gravity="center"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:visibility="gone"/>
+        </FrameLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_gen_otp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/progress_Bar_lay_verify"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="100dp"
+            android:backgroundTint="@color/purple_500"
+            android:text="@string/GetOtp"
+            android:textSize="22sp" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/logo_image_bottom"
+                android:layout_below="@+id/btn_gen_otp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:contentDescription="@string/logo_image"
+                android:src="@drawable/logo"
+                tools:ignore="ImageContrastCheck" />
+
+            <RelativeLayout
+                android:id="@+id/text_lay"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/btn_gen_otp"
+                android:layout_toEndOf="@+id/logo_image_bottom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/text_trade"
+                    android:layout_marginStart="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-condensed"
+                    android:text="@string/info_text"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    app:drawableStartCompat="@drawable/baseline_verified_user_24" />
+
+                <TextView
+                    android:id="@+id/text_data"
+                    android:layout_marginStart="10dp"
+                    android:layout_below="@+id/text_trade"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-condensed"
+                    android:text="@string/data_text"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    app:drawableStartCompat="@drawable/baseline_verified_user_24" />
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "149284796515",
+    "project_id": "myclassadmin-54291",
+    "storage_bucket": "myclassadmin-54291.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:149284796515:android:224cc3c1757a91d1d0e056",
+        "android_client_info": {
+          "package_name": "abidahsoftware.co.in.myclassapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "149284796515-ldd2k95t4ag0cun9i54brfpcrs1oe7pb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "abidahsoftware.co.in.myclassapp",
+            "certificate_hash": "c9591706f6762348373d8e2c1d4a268433eed24a"
+          }
+        },
+        {
+          "client_id": "149284796515-qin02rhe1s49ksqndgv8h148fdndnfnh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyATjTu9-Y5ob77hsyZw8ZqQaagXPSp0Pwo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "149284796515-qin02rhe1s49ksqndgv8h148fdndnfnh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
