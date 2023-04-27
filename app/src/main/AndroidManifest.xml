@@ -21,8 +21,8 @@
 
     <application
         android:allowBackup="true"
-        android:enableOnBackInvokedCallback="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
+        android:enableOnBackInvokedCallback="true"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -30,9 +30,12 @@
         android:theme="@style/Theme.MyClassApp"
         tools:targetApi="tiramisu">
         <activity
-            android:name=".LoginUserEmailActivity"
-            android:theme="@style/Theme.MyClassApp.custom"
+            android:name=".MyClassViewActivity"
             android:exported="false" />
+        <activity
+            android:name=".LoginUserEmailActivity"
+            android:exported="false"
+            android:theme="@style/Theme.MyClassApp.custom" />
         <activity
             android:name=".AddClassActivity"
             android:exported="false" />

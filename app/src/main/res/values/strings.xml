@@ -228,5 +228,9 @@
     <string name="staff_count">Enter Staff Count</string>
     <string name="enter_subject_name">Enter Subject name</string>
     <string name="submit">SUBMIT</string>
-    <string name="uploadText">Upload Image</string>
+    <string name="uploadText">Please Click to Upload Image</string>
+    <string name="description">Enter Your Class Description</string>
+    <string name="contact_info">Enter Contact Details</string>
+    <string name="Please_Add">Please Add Your Class Information Here</string>
+    <string name="Click_here_text">Click Here To Select Image</string>
 </resources>
