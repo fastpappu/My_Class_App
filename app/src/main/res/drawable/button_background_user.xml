@@ -8,6 +8,8 @@
                 android:color="#F57F17"/>
             <corners
                 android:radius="10dp"/>
+            <size android:width="200dp"
+                android:height="50dp"/>
         </shape>
     </item>
 </selector>

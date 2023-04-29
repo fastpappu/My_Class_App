@@ -30,7 +30,8 @@
         android:theme="@style/Theme.MyClassApp"
         tools:targetApi="tiramisu">
         <activity
-            android:name=".MyClassViewActivity"
+            android:name=".MyClassHomeViewActivity"
+            android:theme="@style/Theme.MyClassApp.custom"
             android:exported="false" />
         <activity
             android:name=".LoginUserEmailActivity"

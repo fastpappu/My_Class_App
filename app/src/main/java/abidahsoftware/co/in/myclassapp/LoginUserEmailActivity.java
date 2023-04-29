@@ -82,7 +82,14 @@ public class LoginUserEmailActivity extends AppCompatActivity {
                 login_password_lay.requestFocus();
             }
         });
-
-
+    }
+    @Override
+    protected void onStart() {
+        super.onStart();
+        FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
+        if (currentUser != null) {
+            Intent i = new Intent(getApplicationContext(), MyClassHomeViewActivity.class);
+            startActivity(i);
+        }
     }
 }

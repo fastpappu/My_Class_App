@@ -3,48 +3,34 @@ package abidahsoftware.co.in.myclassapp;
 import androidx.activity.result.ActivityResultCallback;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatImageView;
 
 
 import android.app.Dialog;
-import android.content.ContentResolver;
 import android.content.Intent;
-import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
 
 
-import android.provider.MediaStore;
-import android.service.autofill.UserData;
 import android.view.View;
 import android.view.Window;
-import android.webkit.MimeTypeMap;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
-import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.storage.FirebaseStorage;
-import com.google.firebase.storage.OnProgressListener;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
-import java.nio.charset.StandardCharsets;
-import java.util.Arrays;
 import java.util.Objects;
-import java.util.UUID;
 
 public class AddClassActivity extends AppCompatActivity {
 
@@ -58,7 +44,7 @@ public class AddClassActivity extends AppCompatActivity {
     ArrayAdapter<CharSequence> indianStateAdapter;
     ArrayAdapter<CharSequence> indianCityAdapter;
     Button data_submit;
-    TextView upload_text,select_text;
+    TextView upload_text, select_text;
     AppCompatImageView image_upload_view;
     ActivityResultLauncher<String> mTakePhoto;
     Uri imageUri;
@@ -66,7 +52,6 @@ public class AddClassActivity extends AppCompatActivity {
 
     FirebaseStorage firebaseStorage = null;
     DatabaseReference databaseReference = null;
-
 
 
     @Override
@@ -101,7 +86,6 @@ public class AddClassActivity extends AppCompatActivity {
         Auto_Complete_state = findViewById(R.id.Auto_Complete_state);
 
         data_submit = findViewById(R.id.data_submit);
-        upload_text = findViewById(R.id.upload_text);
         select_text = findViewById(R.id.select_text);
         image_upload_view = findViewById(R.id.image_upload_view);
 
@@ -112,10 +96,35 @@ public class AddClassActivity extends AppCompatActivity {
                 new ActivityResultContracts.GetContent(),
                 new ActivityResultCallback<Uri>() {
                     @Override
-                    public void onActivityResult(Uri result) {
-                        if (result != null) {
-                            image_upload_view.setImageURI(result);
-                            imageUri = result;
+                    public void onActivityResult(Uri uri) {
+                        if (uri != null) {
+                            image_upload_view.setImageURI(uri);
+                            final StorageReference reference = firebaseStorage.getReference()
+                                    .child("images");
+                            reference.putFile(uri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+                                @Override
+                                public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                                    reference.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                                        @Override
+                                        public void onSuccess(Uri uri) {
+                                            dialog = new Dialog(AddClassActivity.this);
+                                            dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+                                            dialog.setContentView(R.layout.dialog_wait);
+                                            dialog.setCanceledOnTouchOutside(false);
+                                            dialog.show();
+                                            databaseReference.getRef().child("class Image")
+                                                    .setValue(uri.toString()).addOnSuccessListener(new OnSuccessListener<Void>() {
+                                                        @Override
+                                                        public void onSuccess(Void unused) {
+                                                            dialog.dismiss();
+                                                            Toast.makeText(AddClassActivity.this, "Image Uploaded", Toast.LENGTH_SHORT).show();
+                                                        }
+                                                    });
+                                        }
+                                    });
+                                }
+                            });
+
                         }
 
                     }
@@ -130,21 +139,12 @@ public class AddClassActivity extends AppCompatActivity {
         });
 
 
-        upload_text.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                uploadImage();
-            }
-        });
-
-
-
-        indianStateAdapter = ArrayAdapter.createFromResource(AddClassActivity.this, R.array.array_indian_states,
+        indianStateAdapter = ArrayAdapter.createFromResource(AddClassActivity.this, R.array.stateName,
                 R.layout.dropdown_item_chooser);
         indianStateAdapter.setDropDownViewResource(android.R.layout.simple_selectable_list_item);
         Auto_Complete_state.setAdapter(indianStateAdapter);
 
-        indianCityAdapter = ArrayAdapter.createFromResource(AddClassActivity.this, R.array.array_maharashtra_districts,
+        indianCityAdapter = ArrayAdapter.createFromResource(AddClassActivity.this, R.array.cityName,
                 R.layout.dropdown_item_chooser);
         indianCityAdapter.setDropDownViewResource(android.R.layout.simple_selectable_list_item);
         Auto_Complete_City.setAdapter(indianCityAdapter);
@@ -226,7 +226,7 @@ public class AddClassActivity extends AppCompatActivity {
                                                                     String userData = AddData.push().getKey();
                                                                     assert userData != null;
                                                                     AddData.child(className).setValue(addClassJava);
-                                                                    Intent i = new Intent(getApplicationContext(), MyClassViewActivity.class);
+                                                                    Intent i = new Intent(getApplicationContext(), MyClassHomeViewActivity.class);
                                                                     startActivity(i);
                                                                     finish();
                                                                     Toast.makeText(AddClassActivity.this, "Successfully Submitted", Toast.LENGTH_SHORT).show();
@@ -278,24 +278,6 @@ public class AddClassActivity extends AppCompatActivity {
                 }
             }
         });
-    }
-
-    private void uploadImage() {
-        if (imageUri != null) {
-            StorageReference reference = firebaseStorage.getReference("ImageDocument/").child("ClassImages"
-                    + UUID.randomUUID().toString());
-            reference.putFile(imageUri).addOnCompleteListener(new OnCompleteListener<UploadTask.TaskSnapshot>() {
-                @Override
-                public void onComplete(@NonNull Task<UploadTask.TaskSnapshot> task) {
-                    if (task.isSuccessful()) {
-                        databaseReference.push().setValue(imageUri.toString());
-                        Toast.makeText(AddClassActivity.this, "image upload Successfully", Toast.LENGTH_SHORT).show();
-                    }else {
-                        Toast.makeText(AddClassActivity.this, "Failed To Upload", Toast.LENGTH_SHORT).show();
-                    }
-                }
-            });
-        }
     }
 
 

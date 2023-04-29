@@ -43,26 +43,8 @@
     <string name="closeDrawer">Close Navigation Drawer</string>
 
 
-    <string-array name="Society_chooser">
-        <item>Adarsha Gharkul Society, Saidapur</item>
-        <item>Adarsha Krutika Society, Saidapur</item>
-        <item>Adarsha Uttara Society, Saidapur</item>
-        <item>One Earth Society, Saidapur</item>
-        <item>Madhukosh Society, Saidapur</item>
-    </string-array>
-
-    <!--    string for gate select id-->
-    <string-array name="GateSelector">
-        <item>Gate Number 1</item>
-        <item>Gate Number 2</item>
-        <item>Gate Number 3</item>
-        <item>Gate Number 4</item>
-        <item>Gate Number 5</item>
-        <item>Main Gate</item>
-    </string-array>
-
     <!--  string array list for indian states  -->
-    <string-array name="array_indian_states">
+    <string-array name="stateName">
         <item>Andaman and Nicobar Islands</item>
         <item>Andhra Pradesh</item>
         <item>Arunachal Pradesh</item>
@@ -103,7 +85,7 @@
     </string-array>
 
     <!-- String for Indian City List-->
-    <string-array name="array_maharashtra_districts">
+    <string-array name="cityName">
         <item>Ahmednagar</item>
         <item>Akola</item>
         <item>Amravati</item>
@@ -233,4 +215,13 @@
     <string name="contact_info">Enter Contact Details</string>
     <string name="Please_Add">Please Add Your Class Information Here</string>
     <string name="Click_here_text">Click Here To Select Image</string>
+    <string name="title_class">Class Title</string>
+    <string name="home_nav">Home</string>
+    <string name="activity_class">activity</string>
+    <string name="add_student">Add student</string>
+    <string name="find_student">Find</string>
+    <string name="add_class">+ Add Class</string>
+    <string name="gate_text_info">Get More From Us</string>
+    <string name="text_info_2">Enhance your Class Level to a different level and make your class growable in every season. Tell us more about your class</string>
+    <string name="add_attendance">Attendance</string>
 </resources>

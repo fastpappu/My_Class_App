@@ -4,4 +4,5 @@
     <string name="enter_address">Enter Address with Pincode</string>
     <string name="Please_Add">Please Add Your Class Information Here</string>
     <string name="Click_here_text">Click Here To Select Image</string>
+    <string name="add_class">Add Class</string>
 </resources>

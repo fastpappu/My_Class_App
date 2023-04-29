@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/AddClassActivity"
     android:orientation="vertical"
     tools:context=".AddClassActivity">
 
@@ -30,22 +32,9 @@
             android:fitsSystemWindows="true"
             android:layout_marginBottom="10dp"
             android:layout_marginTop="10dp"
-            android:scaleType="fitXY"
+            android:scaleType="centerCrop"
             android:layout_width="match_parent"
             android:layout_height="200dp" />
-
-        <TextView
-            android:id="@+id/upload_text"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:linksClickable="true"
-            android:text="@string/uploadText"
-            android:textAlignment="center"
-            android:textColor="#EF6C00"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            app:drawableBottomCompat="@drawable/baseline_cloud_upload_24" />
 
         <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"

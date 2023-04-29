@@ -30,6 +30,7 @@ public class LoginMobileActivity extends AppCompatActivity {
 
     TextView start_email_activity;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -101,7 +102,8 @@ public class LoginMobileActivity extends AppCompatActivity {
         super.onStart();
         FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
         if (currentUser != null) {
-            startActivity(new Intent(LoginMobileActivity.this, AddClassActivity.class));
+            Intent i = new Intent(getApplicationContext(), MyClassHomeViewActivity.class);
+            startActivity(i);
             finish();
         }
     }

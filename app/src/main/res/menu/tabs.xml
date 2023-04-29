@@ -1,4 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-
+    <item android:id="@+id/home_item"
+        android:title="@string/home_nav"
+        android:icon="@drawable/baseline_home_24"/>
+    <item android:id="@+id/Activity_item_nav"
+        android:title="@string/activity_class"
+        android:icon="@drawable/baseline_local_activity_24"/>
+    <item android:id="@+id/search_button"
+        android:title="@string/find_student"
+        android:icon="@drawable/baseline_person_search_24"/>
+    <item android:id="@+id/student_item_nav"
+        android:title="@string/add_student"
+        android:icon="@drawable/baseline_person_add_alt_1_24"/>
+    <item android:id="@+id/attendance_nav"
+        android:title="@string/add_attendance"
+        android:icon="@drawable/baseline_note_add_24"/>
 </menu>
